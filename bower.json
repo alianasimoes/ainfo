@@ -1,0 +1,17 @@
+{
+  "name": "Ainfo",
+  "homepage": "https://github.com/alianasimoes/ainfo",
+  "authors": [
+    "alianasimoes <aliana@aliana.com.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

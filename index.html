@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<!-- Meta informacao da pagina -->
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" CONTENT="pt-BR">
+	<script language="JAVASCRIPT" src="/web/js/functions.js" type="text/javascript"></script>
+	
+	<!-- Titulo da pagina -->
+	<title>Consulta</title>
+ 	<!-- Links para os recursos utilizados pela pagina -->
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/web/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	
+
+	<!-- HEADER -->
+	<header >
+        <p class="logotipo"><a href="/?initQuery=t"></a></p>
+		<h1>Biblioteca Rui Tendinha</h1>
+		<ul class="menulanguage">
+			<li><a title="Português" href="/?locale=pt_B&amp;initQuery=t"></li>
+			<li><img alt="Português" src="/web/img/brazil.png"></a></li>
+			<li><a title="Español" style="padding-left:3px" href="/?locale=es&amp;initQuery=t"></li>
+			<li><img alt="Español" src="/web/img/spain.png"></a></li>
+			</ul>
+    </header>
+    
+    <!-- MENU SUPERIOR -->
+    <nav class="menup">
+		<ul class="menu">
+			<li>
+				<a href="/ajuda">Principal</a> </li>
+	
+		<li>
+			<a href="/bibliotecas" title="">Bibliotecas</a> </li>
+		<li>
+			<a href="/creditos" title="">Créditos</a></li>
+		<li>
+			<a href="/ajuda">Itens Selecionados</a> </li>
+
+		<li>
+				<a href="/ajuda">Ajuda</a> </li>
+		</ul>
+					
+				
+
+	</nav>
+	
+		<!-- FORMULARIO CENTRAL -->
+		<div class="container">
+		<div class= "busca">
+			<div class="formulario" summary="Tabela do Formulario" >
+						<form id="frmBusca" name="frmBusca" method="post" action="busca" onSubmit="return validaFormSearch(this);">
+							<div  class="campobusca">
+								<select name="biblioteca" class="bibliotecaItemPrincipal">
+									<option class="optionBibliotecaItem" value="vazio">Todas as Bibliotecas</option>
+									
+												<option class="optionBibliotecaItem" value=BRT>Biblioteca Rui Tendinha</option>
+											
+												<option class="optionBibliotecaItem" value=BSOO>ELDR Sooretama</option>
+											
+												<option class="optionBibliotecaItem" value=BESP>Programa A Voz do Campo</option>
+											
+									</select>
+								<input type="text" id="busca" name="busca" value="" accesskey="1" class="textBuscarPrincipal">
+								<input type="hidden" name="countBiblioteca" value="3">
+								<input type="hidden" name="countDocumento" value="25.545">
+								<input type="hidden" name="clickBuscaSimples" value="t">
+								<input type="hidden" name="clickBuscaAvancada" value="f">
+								<button  class="botaobusca" type="button" onclick="return submitBusca(this);">Pesquisar</button> 
+							</div>
+						</form>
+					</div>
+						
+								
+								<ul class="ajuda">
+									<li class="documento">25.545 documentos indexados em 3 coleções.</li>
+									<li class="linkbusca"><a href="/buscaavancada" title="Busca avançada">
+									Busca avançada
+									</a></li>
+									<li class="linkbusca"><a href="/ajuda" title="Ajuda">
+									Ajuda
+									</a></li>
+								</ul>
+						
+					
+					
+			
+		</div>
+		
+
+		<!-- NUVEM DE PALAVRAS -->
+
+		<div class="nuvempalavras">
+		
+				<section class="titpalavras"  id="abaDaNuvem">
+					<p><b>Palavras-chave</b></p>
+					<!--<img src="/web/img/palavras-laranja.jpg" alt="Palavras-chave" id="abaPalavras" onclick="javascript:mostraPalavras();"> -->
+					<!--<img src="/web/img/pesquisas-laranja.jpg" alt="Pesquisas" id="abaPesquisas" onclick="javascript:mostraPesquisas();"> -->
+				</section>
+		
+			<div class="txtpalavras" id="nuvemPalavras">
+				<section class="tagCloud" >
+					<ul style="padding:0; outline:none; margin:0; border:0;">
+						<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Praga" class="n3">Praga</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Controle" class="n2">Controle</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Produção" class="n3">Produção</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Brasil" class="n4">Brasil</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Café conilon" class="n2">Café conilon</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Brazil" class="n3">Brazil</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Café Conilon" class="n2">Café Conilon</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Adubação" class="n3">Adubação</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Solo" class="n4">Solo</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Cultivo" class="n3">Cultivo</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Espírito Santo (Estado)" class="n4">Espírito Santo (Estado)</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Doença" class="n3">Doença</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Agricultura familiar" class="n3">Agricultura familiar</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Cafeicultura" class="n2">Cafeicultura</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Manejo" class="n3">Manejo</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Agricultura" class="n3">Agricultura</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Clima" class="n2">Clima</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Coffea canephora" class="n3">Coffea canephora</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Café" class="n2">Café</a></li>
+<li><a href="busca?clickBuscaSimples=t&amp;showQuery=t&amp;busca=assunto:Milho" class="n2">Milho</a></li>
+
+					</ul>
+				</section>
+			</div>
+		</div>
+
+	</div>
+		
+	
+
+<!-- RODAPÉ VERDE -->
+<div class="rodape">
+
+		<div class="txtrodape">
+			    Embrapa<br>
+	            Todos os direitos reservados, conforme Lei n° 9.610<br>
+	            Política de Privacidade<br>
+	
+		</div>
+
+		<div class="txtrodape">
+			Incaper<br>
+			Biblioteca Rui Tendinha<br>
+			Rua Afonso Sarlo, 160 - Bento Ferreira<br>
+			CEP: 29052-010 - Vitória / ES <br>
+			Tel.: (27) 3636-9800 / (27) 3636-9846 <br>
+			E-mail: biblioteca@incaper.es.gov.br<br>
+
+	</div>
+		
+	
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61260998-2"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	      gtag('js', new Date());
+
+	        gtag('config', 'UA-61260998-2');
+	</script>
+
+
+	<script language="JavaScript" type="text/JavaScript">
+		document.forms.frmBusca.busca.focus();
+	</script>
+</body>
+</html>

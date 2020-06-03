@@ -62,8 +62,7 @@ header{
 }
 .menu li a {
 	display: block;
-	padding: 10px;
-	color:#707070;
+	color: #4d4d4d;
 	font-size: 0.85em;
 
 }
@@ -84,7 +83,6 @@ header{
 }
 .menulanguage li a {
 	display: block;
-	padding: 10px;
 	color:#ffffff;
 	font-size: 0.8em;
 
@@ -100,7 +98,7 @@ header{
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-items: center;
-justify-content: center;
+	justify-content: center;
 	padding: 10px;
 
 }
@@ -207,6 +205,34 @@ margin-top: 60px;
 
 }
 
+.texto {
+	font-size: 0.9em;
+	padding: 40px 10px;
+	color: 	#4d4d4d;
+
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 600px;
+
+}
+.titulotexto{
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0px 0px;
+	color: #4d4d4d;
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 600px;
+	text-transform: uppercase;
+	margin:auto;
+	text-align: center;
+
+}
+p{
+	line-height: 1.8;
+	margin-top: 50px;
+}
+
 table 
 {	
 	padding:0px;
@@ -217,6 +243,18 @@ table
 	border-left:0px;
   	border-right:0px;
 }
+
+.separator {
+    height: 3px;
+    width: 150px;
+	margin-top: 8px;
+	margin:auto;
+    margin-bottom: 50px;
+	background: #4dbc99;}
+
+	.color-secondary-background-color, a.color-secondary-background-color, .nav>li>a.color-secondary-background-color {
+		background-color: #009687;
+	}
 
 table.rodape
 {

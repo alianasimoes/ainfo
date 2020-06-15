@@ -10,6 +10,7 @@ h1{
 	font-size:1.8em;
 	font-weight: normal;
 	margin-top: 65px;
+	text-align: center;
 }
 
 a{
@@ -32,8 +33,9 @@ body, ul, li, p
 }
 header{
 	background: #009687;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 300px 1fr 180px;
+	align-items: center;
 	margin: 0px;
 	padding: 10px;
 
@@ -45,6 +47,7 @@ header{
 	width: 217px;
 	height: 95px;
 	display: block;
+	text-align: center;
 }
 .menup{
 	display: flex;
@@ -65,7 +68,8 @@ header{
 .menu li a {
 	display: block;
 	color: #4d4d4d;
-	font-size: 0.85em;
+	font-size: 0.9em;
+	font-weight: 500;
 
 }
 .menu li a:visited {
@@ -77,6 +81,7 @@ header{
 .menulanguage{
 
 	display: flex;
+	margin-bottom: 100px;
 }
 .menulanguage li{
 	margin-left: 20px;
@@ -91,7 +96,7 @@ header{
 }
 .menulanguage li a:visited {
 
-	color:#009687;
+	color:#ffffff;
 	font-size: 0.8em;
 
 }
@@ -1130,7 +1135,7 @@ select
 	vertical-align:middle;
 	width:317px;
 	border:1px solid #CBCACA;
-	margin-top: 10px;
+
 	
 }
 
@@ -1259,4 +1264,14 @@ div.scroll {
 
 .highlighting {
 	background-color: yellow;
+}
+
+@media screen and (max-width: 880px){
+
+header{
+	grid-template-columns: auto 1fr auto;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0;
+	margin: 1.25rem auto 0;
+}
 }

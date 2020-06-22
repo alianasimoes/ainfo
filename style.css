@@ -53,9 +53,11 @@ header{
 	display: flex;
 }
 
-.menu{
+.menu ul{
 
 	display: flex;
+	
+
 
 }
 .menu li{
@@ -64,19 +66,30 @@ header{
 	list-style: none;
 	text-transform: uppercase;
 	padding: 18px;
+
 }
 .menu li a {
 	display: block;
 	color: #4d4d4d;
 	font-size: 0.9em;
-	font-weight: 500;
+	font-weight: 600;
+
 
 }
-.menu li a:visited {
+	
+.menu li a:hover{
 
 	color:#009687;
-	font-size: 0.85em;
+	font-size: 0.9em;
+	list-style: none;
+	text-decoration: none;
 
+}
+#btmenu{
+	display: none;
+}
+label[for="btmenu"]{
+	display: none;
 }
 .menulanguage{
 
@@ -1217,12 +1230,7 @@ select
 	vertical-align:middle;
 }
 
-TD.governoFederal {
-	padding:0;
-	margin:0;
-	border:0;
-	background-image:url('../img/filete-barra-governo_verde.jpg');
-}
+
 
 .linkMarcarDesmarcarItem {
 	cursor:pointer;	
@@ -1266,12 +1274,187 @@ div.scroll {
 	background-color: yellow;
 }
 
-@media screen and (max-width: 880px){
+@media screen and (max-width: 600px){
+
+
 
 header{
-	grid-template-columns: auto 1fr auto;
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0;
-	margin: 1.25rem auto 0;
+	display: grid;
+	grid-template-rows: 0.6fr 0.4fr 0.2fr;
+	grid-template-columns: 1fr;
+	background-color: #009687;
+	gap:10px;
 }
+.logotipo{
+	background-image: url(img/logo_incaper.png);
+	margin: 0 auto;
+	width: 217px;
+	height: 95px;
+	display: block;
+	text-align: center;
+}
+
+h1{
+	color: #ffffff;
+	font-family:'OpenSans-Bold',Arial,sans-serif;
+	font-size:1.5em;
+	font-weight: normal;
+	margin-top: 15px;
+	text-align: center;
+
+}
+.menulanguage{
+
+	display: flex;
+	margin: 0 auto;
+	grid-row: 1/1;
+
+}
+label[for="btmenu"]{
+	display: block;
+	padding: 15px;
+	color: #009687;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+	width:100px;
+	height: 20px;
+
+}
+nav { display: none; }
+
+#btmenu:checked ~ nav {
+	display: block;
+}
+
+
+.menu ul{
+
+	display: grid;
+	grid-template-rows: 0.2fr 0.2fr 0.2fr;
+	grid-template-columns: 1fr;
+	background-color: #009687;
+	margin-top: 1px;
+	
+}
+.menu li a {
+
+	color: #fff;
+
+}
+.menu li a:hover {
+
+	color: #fff;
+	text-decoration: underline;
+
+}
+#btmenu:checked ~ .menu {
+	
+	margin-left: 0;
+}
+
+
+.grid{
+    display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+	grid-gap: 20px;
+	margin-top: 10px;
+}
+.gridfiltros {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 10px auto;
+    grid-gap: 20px;
+}
+.grid > div:nth-child(1){
+	grid-template-columns: 1fr 0.5fr;
+	grid-row-gap:5px ;
+	grid-column-gap: 20px;
+	margin: 0 auto;
+}
+
+.botaolimpar{
+	margin-left: 0px;
+	margin-bottom: 20px;
+}
+
+.ajuda{
+	display: block;
+	justify-content: space-around;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	list-style-type: none;
+	padding-bottom: 40px;
+	text-align: center;
+	}
+	
+.ajuda ul{
+		list-style-type: none;
+	
+	}
+
+.botaobusca2{
+	margin-top: 20px;
+}
+.subTitulo{
+	margin-top: 50px;
+}
+.textBuscarPrincipal
+{
+	margin-top: 10px;
+	width: 275px;
+}
+.botaobusca2{
+	margin: 9px 80px;
+	justify-content: center;
+	align-items: center;
+}
+.gridfiltros{
+	display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0px auto;
+    grid-gap: 20px;
+
+}
+.campo2, .campo3{
+	margin: 0 40px 10px 40px;
+}
+.coluna1, .coluna2, .coluna3{
+margin: 0px 40px;
+}
+.campobusca{
+	display: block;
+	max-width: 300px;
+	align-items: center;
+	justify-content: center;
+
+}
+.bibliotecaItemPrincipal{
+	height: 45px;
+	margin: 0 auto;
+	width: 180px;
+}
+.documento{
+	margin-right: 0px;
+	margin-bottom: 15px;
+}
+.rodape{
+	display: block;
+    border-top: 1px solid #009875!important;
+    margin-top: 60px;
+    text-align: left;
+
+}
+.txtrodape{
+padding: 20px 60px;
+
 }

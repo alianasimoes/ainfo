@@ -1,0 +1,458 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<!-- Meta informacao da pagina -->
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Language" CONTENT="pt-BR">	
+	<script language="JAVASCRIPT" src="/web/js/functions.js" type="text/javascript"></script>
+	<script src="/web/js/jquery-1.4.2.min.js" type="text/javascript"></script>    
+    <script src="/web/js/jquery-ui-1.8.4.custom.min.js" type="text/javascript"></script>
+	
+	<link href="/web/css/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css">	
+	<!-- Titulo da pagina -->
+	<title></title>
+ 	<!-- Links para os recursos utilizados pela pagina -->
+	 <link href="style.css" rel="stylesheet" type="text/css">
+	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/web/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="fundoBranco">	
+	
+	<!-- HEADER -->
+	<header >
+        <p class="logotipo"><a href="/?initQuery=t"></a></p>
+		<h1>Biblioteca Rui Tendinha</h1>
+		<ul class="menulanguage">
+			<li><a title="Português" href="/?locale=pt_B&amp;initQuery=t">Português</li>
+			
+			<li><a title="Español" style="padding-left:3px" href="/?locale=es&amp;initQuery=t">Espanhol</li>
+	
+			</ul>
+    </header>
+	
+ <!-- MENU SUPERIOR -->
+ <input type="checkbox" id="btmenu"><label for="btmenu" class="btmenu">Menu</label>
+ <nav class="menu">
+     <ul >
+     <li>
+         <a href="/ajuda">Principal</a> </li>
+     <li>
+         <a href="/bibliotecas" title="">Bibliotecas</a> </li>
+     <li>
+         <a href="/creditos" title="">Créditos</a></li>
+     <li>
+         <a href="/ajuda">Itens Selecionados</a> </li>
+
+     <li>
+             <a href="/ajuda">Ajuda</a> </li>
+     </ul>
+                 
+             
+
+ </nav>
+
+<!-- conteúdo -->
+
+	<div class="container">
+	
+		<!-- inicio busca -->
+		<div class="busca">
+			<div class="formulario" summary="Tabela do Formulario" >
+				<form id="frmBusca" name="frmBusca" method="post" action="busca" onSubmit="return submitBusca(this);">
+					<input type="hidden" name="b" value="ad">
+					<input type="hidden" name="clickBuscaSimples" value="t">
+					<input type="hidden" name="clickBuscaAvancada" value="f">
+					<select name="biblioteca" class="bibliotecaItem">
+						<option class="optionBibliotecaItem" value="vazio">Todas as Bibliotecas</option>
+						
+										<option class="optionBibliotecaItem" value=BRT>Biblioteca Rui Tendinha</option>
+						
+										<option class="optionBibliotecaItem" value=BSOO>ELDR Sooretama</option>
+						
+										<option class="optionBibliotecaItem" value=BESP>Programa A Voz do Campo</option>
+						
+					</select>
+					<input class="textBuscar2" type="text" name="busca" value="kiwi">
+					<input style="padding-left:10px" class="botaobusca2" type="submit" value="Buscar">					
+					<input style="padding-left:10px" class="botaobusca2" type="button" value="Busca avançada" onclick="irBuscaAvancada();">						
+				</form>
+					
+			</div>
+		</div>
+	<!-- fim da busca -->	
+		
+		
+		
+	<div id="container-1">
+		
+		
+			<!-- inicio Tabulacao -->
+							
+			<ul class="nav-tabs"> 	<!-- Tabs -->
+				<li><a class="aba_tabs" onclick="abas(1);"><span>Acervo documental</span></a></li>
+				<li><a class="aba_tabs" onclick="abas(2);"><span>Produção científica</span></a></li>
+				<li><a class="aba_tabs" onclick="abas(3);"><span>Coleção de periódicos</span></a></li>
+			</ul> 	<!-- fecha Tabs -->
+			
+
+			<div id="fragment-1"> <!-- Pagina 1 -->
+				
+				<div class="tabela" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+						<div valign="top" class="coluna1b"> <!-- Coluna 1 -->
+							<form name="frmFacetsDocumento" method="post" action="busca">
+								<input type="hidden" name="busca" value="kiwi">
+								<input type="hidden" name="b" value="ad">
+								<input type="hidden" name="biblioteca" value="vazio">
+								
+								<div class="itema" width="100%" border="0" bgcolor="white"><!--Incia itema-->
+									<div align="center" valign="middle">
+										<input  class="buttonAtualizar" type="submit" onclick="document.frmFacetsDocumento.submit();" value="ATUALIZAR"><br><br>		
+									
+									</div>
+								</div>
+								
+								<!--Fecha itema-->
+								
+								<div class="itemb" > <!--Incia itemb-->
+									<div class="tititem">
+										<table width="100%" border="0" bgcolor="white">
+											<tbody>
+											<tr>
+												<td id="menuBibliotecaAD" class="menuLaranjaAberto" onclick="javascript:mostraEsconde('menuBibliotecaAD','subMenuBibliotecaAD');"> 
+													Biblioteca
+												</td>
+											</tr>
+										</tbody>
+											</table>
+									</div>
+								
+									<div class="itemb1" width="100%" border="0" bgcolor="white" id="subMenuBibliotecaAD">
+										<tr>
+										<td width="100%">
+										<table width="100%">
+<tr title="Biblioteca Rui Tendinha"><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets100" value="BRT">BRT <b>(7)</b></td><td width="3px"></td></tr>
+</table>
+
+										</td>
+										</tr>								
+									</div>
+								</div> <!--Fecha itemb-->
+										
+								<div class="itemc" width="100%" border="0" bgcolor="white"> <!--Incia itemc-->
+											<div class="tititem">
+												<table width="100%" border="0" bgcolor="white"> 
+													<tr>
+													<td id="menuAutoriaAD" class="menuLaranjaAberto"  onclick="javascript:mostraEsconde('menuAutoriaAD','subMenuAutoriaAD');"> 
+													Autor
+												</td>
+												</tr>
+											
+												</table>
+											</div>
+								
+								<div class="itemc1" width="100%" border="0" bgcolor="white" id="subMenuAutoriaAD">
+									
+										
+										<table width="100%">
+										<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets200" value="BORROZZINO, E.">BORROZZINO, E. <b>(1)</b></td><td width="3px"></td></tr>
+										<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets201" value="CARAMORI, P. H.">CARAMORI, P. H. <b>(1)</b></td><td width="3px"></td></tr>
+										<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets202" value="CAVIGLIOME, J. H.">CAVIGLIOME, J. H. <b>(1)</b></td><td width="3px"></td></tr>
+										<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets203" value="CONGRESSO BRASILEIRO DE FRUTICULTURA, 14.">CONGRESSO BRASILEIRO DE FRUTICULTURA, 14. <b>(1)</b></td><td width="3px"></td></tr>
+										<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets204" value="CONGRESSO BRASILEIRO DE FRUTICULTURA, 17., 2002, Belem, PA.">CONGRESSO BRASILEIRO DE FRUTICULTURA, 17., 2002, Belem, PA. <b>(1)</b></td><td width="3px"></td></tr>
+										</table><div id="facetsAutoriaDetalhes" style="display:none;"><table width="100%">
+
+</table></div>
+<table width="100%"><tr><td width="3px"></td><td align="right" class="mostrarDetalhes" onclick="javascript:mostraEscondeDetalhes('facetsAutoriaDetalhes');"><span onclick="javascript:this.innerHTML=textoSpan(this.innerHTML,'Mais...','Menos');">Mais...</span></td><td width="3px"></td></tr></table>
+
+									
+																	
+									</div>	
+								</div>	<!--Fecha itemc-->							
+							<div class="itemd"> <!--Incia itemd-->
+								<table width="100%" border="0" bgcolor="white"> 
+											<tr>
+												<td id="menuAssuntoAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuAssuntoAD','subMenuAssuntoAD');"> 
+													Assunto
+												</td>
+											</tr>
+										</table>
+										<table width="100%" border="0" bgcolor="white" id="subMenuAssuntoAD">
+										<tr>
+										<td width="100%">
+										<table width="100%">
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets300" value="Brasil">Brasil <b>(6)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets301" value="Fruta">Fruta <b>(4)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets302" value="Kiwi">Kiwi <b>(3)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets303" value="Carambola">Carambola <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets304" value="Congress">Congress <b>(2)</b></td><td width="3px"></td></tr>
+</table><div id="facetsAssuntoDetalhes" style="display:none;"><table width="100%">
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets305" value="Congresso">Congresso <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets306" value="Cultivo">Cultivo <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets307" value="Fruit">Fruit <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets308" value="Fruticultura">Fruticultura <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets309" value="Produção">Produção <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets310" value="Quiwi">Quiwi <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets311" value="Variedade">Variedade <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets312" value="APPCC">APPCC <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets313" value="Abacaxi">Abacaxi <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets314" value="Acerola">Acerola <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets315" value="Achras sapota">Achras sapota <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets316" value="Actimidia deliciosa">Actimidia deliciosa <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets317" value="Actinia deliciosa">Actinia deliciosa <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets318" value="Actinidia Deliciosa">Actinidia Deliciosa <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets319" value="Actinidia deliciosa">Actinidia deliciosa <b>(1)</b></td><td width="3px"></td></tr>
+</table></div>
+<table width="100%"><tr><td width="3px"></td><td align="right" class="mostrarDetalhes" onclick="javascript:mostraEscondeDetalhes('facetsAssuntoDetalhes');"><span onclick="javascript:this.innerHTML=textoSpan(this.innerHTML,'Mais...','Menos');">Mais...</span></td><td width="3px"></td></tr></table>
+
+										</td>
+										</tr>									
+										</table>									
+									</div>	<!--Fecha item d-->
+										
+									<div class="iteme"> <!--Inicia item E-->
+									<table width="100%" border="0" bgcolor="white"> 
+											<tr>
+												<td id="menuTipoMaterialAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuTipoMaterialAD','subMenuTipoMaterialAD');"> 
+													Tipo do material
+												</td>
+											</tr>
+										</table>
+										<table width="100%" border="0" bgcolor="white" id="subMenuTipoMaterialAD">
+										<tr>
+										<td width="100%">
+										<table width="100%">
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets400" value="Livros">Livros <b>(3)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets401" value="Anais e Proceedings de eventos">Anais e Proceedings de eventos <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets402" value="Folhetos">Folhetos <b>(2)</b></td><td width="3px"></td></tr>
+</table>
+
+										</td>
+										</tr>
+										</table>									
+									</div> <!--Fecha item E-->
+
+									<div class="itemf"> <!--Inicia item F-->
+										<table width="100%" border="0" bgcolor="white"> 
+											<tr>
+												<td id="menuAnoPublicacaoAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuAnoPublicacaoAD','subMenuAnoPublicacaoAD');"> 
+													Ano de publicação
+												</td>
+											</tr>
+										</table>
+										<table width="100%" border="0" bgcolor="white" id="subMenuAnoPublicacaoAD">
+										<tr>
+										<td width="100%">
+										<table width="100%">
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets500" value="2007">2007 <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets501" value="2003">2003 <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets502" value="2002">2002 <b>(1)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets503" value="1998">1998 <b>(2)</b></td><td width="3px"></td></tr>
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets504" value="1996">1996 <b>(2)</b></td><td width="3px"></td></tr>
+</table>
+
+										</td>
+										</tr>								
+										</table>	
+									</div>	<!--Fecha item F-->	
+									
+									<div class="itemG"><!--Inicia item G-->
+										
+										<table width="100%" border="0" bgcolor="white"> 
+											<tr>
+												<td id="menuIdiomaAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuIdiomaAD','subMenuIdiomaAD');"> 
+													Idioma
+												</td>
+											</tr>
+										</table>
+										<table width="100%" border="0" bgcolor="white" id="subMenuIdiomaAD">
+										<tr>
+										<td width="100%">
+										<table width="100%">
+<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets700" value="Português">Português <b>(7)</b></td><td width="3px"></td></tr>
+</table>
+
+										</td>
+										</tr>
+										</table>	
+										
+									</div><!--Fecha item G-->
+									<div class="itemG"><!--Inicia item H-->
+								<table width="100%" border="0" bgcolor="white">
+									<tr>
+										<td align="center" valign="middle"> 
+											  <br><input  class="buttonAtualizar" type="submit" onclick="document.frmFacetsDocumento.submit();" value="ATUALIZAR"><br><br>		
+										</td>
+									</tr>
+								</table>
+							</div> <!--Fecha item H-->
+							</form>
+						</div> <!-- Fim da Coluna 1 -->
+						<div class="coluna2b">
+						<div valign="top" class="colunaRegistro"> <!-- Coluna 2 -->
+						<ul class="listaColuna2" class="itemSort">
+							<li><b>Ordenar por:</b> </li>
+								<li  class="ordenacaoEscolhida">Relevância</li>
+								<li><a class="linkOrdenacao" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=autoria-sort&amp;paginacao=t&amp;paginaAtual=1">Autor</a></li>
+								<li><a class="linkOrdenacao" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=titulo-sort&amp;paginacao=t&amp;paginaAtual=1">Título</a></li>
+								<li ><a class="linkOrdenacao" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=ano-publicacao&amp;paginacao=t&amp;paginaAtual=1">Ano</a></li>
+								<li><a title="Imprime registros no formato resumido" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1&amp;ig=t"><img  width="32" height="32" alt="Imprime registros no formato resumido" src="img/print-big.png"></a></li>
+							</ul>
+
+						<ul  class="listaColuna2b">
+							<li ><span class="registrosRecuperados">Registros recuperados : 7</span></li>
+	
+							<li align="right"><tr><td class="itemPaginacaoPrimeiraPagina"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">Primeira</a></li>
+								<li class="itemPaginacao"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1"> ... </a></li>
+								<li class="itemPaginacao"><a class="linkPaginacaoSelected" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">1</a></li>
+								<li class="itemPaginacao"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1"> ... </a></li>
+								<li class="itemPaginacaoUltimaPagina"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">Última</a></li>
+							
+							</ul>
+						<div class="itemResult">
+
+						<ul class="listResult">
+
+							<li >1.</li>
+							<li ><a class="linkMarcarDesmarcarItem" onclick="selecionaItem('17008', 'ad')">
+							<img alt="Imagem marcado/desmarcado" id="imgad17008" src="img/desmarcado.png"></a></li>
+							<li class="txtResult" >
+							<a class="linkAutoriaPesquisa" href="busca?b=ad&amp;biblioteca=vazio&amp;busca=autoria:&quot;SIMONETTO, P. R.&quot;">
+								SIMONETTO, P. R.</a>; <a class="linkAutoriaPesquisa" href="busca?b=ad&amp;biblioteca=vazio&amp;busca=autoria:&quot;GRELLMANN, E. O.&quot;">GRELLMANN, E. O.</a> 
+								<a class="linkTituloPesquisa" href="busca?b=ad&amp;id=17008&amp;biblioteca=vazio&amp;busca=kiwi&amp;qFacets=kiwi&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">Cultivares de <span class="highlighting">kiwi</span> com potencial de produção na região da Serra do Nordeste do Rio Grande do Sul.</a> Porto Alegre: FEPAGRO, 1998. 19 p. (FEPAGRO. Boletim, 7).
+								<ul>
+								<li valign="top" width="100%"><b>Biblioteca(s):&nbsp;</b>Biblioteca Rui Tendinha.</li></ul></li>
+							<li><a title="Visualizar detalhes do registro" href="busca?b=ad&amp;id=17008&amp;biblioteca=vazio&amp;busca=kiwi&amp;qFacets=kiwi&amp;sort=&amp;paginacao=t&amp;paginaAtual=1"><img alt="Visualizar detalhes do registro" src="img/visualizar.png"></a>
+							</li>
+							<li><a title="Imprime registro no formato completo" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1&amp;id=17008&amp;ic=t">
+							<img style="padding-left:3px" alt="Imprime registro no formato completo" src="img/print.png"></a>
+							</li>
+	</ul>
+</div>
+	
+
+
+
+
+<ul  class="listaColuna2b">
+	<li ><span class="registrosRecuperados">Registros recuperados : 7</span></li>
+
+	<li align="right"><tr><td class="itemPaginacaoPrimeiraPagina"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">Primeira</a></li>
+		<li class="itemPaginacao"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1"> ... </a></li>
+		<li class="itemPaginacao"><a class="linkPaginacaoSelected" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">1</a></li>
+		<li class="itemPaginacao"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1"> ... </a></li>
+		<li class="itemPaginacaoUltimaPagina"><a class="linkPaginacaoAux" href="busca?b=ad&amp;busca=kiwi&amp;qFacets=kiwi&amp;biblioteca=vazio&amp;sort=&amp;paginacao=t&amp;paginaAtual=1">Última</a></li>
+	
+	</ul>
+
+						</div>
+					</tr>
+				</table>					
+								
+			</div><!-- Fim da Coluna 2 -->
+		</div> 
+	</div><!-- Fim da Fagment1 -->
+
+
+		<!--
+			<div id="fragment-2">
+				
+				<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">Nenhum registro encontrado para a expressão de busca informada.</td></tr></table>
+											
+			</div>
+			<div id="fragment-3">
+				
+				<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">Nenhum registro encontrado para a expressão de busca informada.</td></tr></table>
+											
+			</div>
+	
+				
+			</div>	-->
+	</div>
+
+
+
+
+
+ 
+		
+<div class="rodape">
+
+	<div class="txtrodape">
+			Embrapa<br>
+			Todos os direitos reservados, conforme Lei n° 9.610<br>
+			Política de Privacidade<br>
+
+	</div>
+
+	<div class="txtrodape">
+		Incaper<br>
+		Biblioteca Rui Tendinha<br>
+		Rua Afonso Sarlo, 160 - Bento Ferreira<br>
+		CEP: 29052-010 - Vitória / ES <br>
+		Tel.: (27) 3636-9800 / (27) 3636-9846 <br>
+		E-mail: biblioteca@incaper.es.gov.br<br>
+
+</div>
+	
+
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61260998-2"></script>
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	      gtag('js', new Date());
+
+	        gtag('config', 'UA-61260998-2');
+	</script>
+
+
+<script language="JavaScript" type="text/JavaScript">
+	document.forms.frmBusca.busca.focus();
+</script>
+<script language="JavaScript" type="text/JavaScript">
+	var tabSelected = 0;
+</script>
+
+<script language="JavaScript" type="text/JavaScript">
+$(function() {
+	$('#container-1').tabs({selected:tabSelected});
+});
+
+function abas(n) {
+	if (n == 1) {
+		document.frmBusca.b.value='ad';
+	}
+	if (n == 2) {
+		document.frmBusca.b.value='pc';
+	}
+	else if (n == 3) {
+		document.frmBusca.b.value='cp';
+	}
+	else {
+	}
+	
+	$('#container-1').tabs("option", "selected", n-1);
+}
+
+function irBuscaAvancada() {	
+	if (document.frmBusca.b.value=='pc') {
+		location.href='buscaavancada?b=pc';
+	}
+	else if (document.frmBusca.b.value=='cp') {
+		location.href='buscaavancada?b=cp';
+	}
+	else {
+		location.href='buscaavancada?b=ad';
+	}
+}
+</script>
+</body>
+</html>

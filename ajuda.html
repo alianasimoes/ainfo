@@ -1,0 +1,434 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+<head>
+	<!-- Meta informacao da pagina -->
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" CONTENT="pt-BR">
+	<script language="JAVASCRIPT" src="/web/js/functions.js" type="text/javascript"></script>
+	<!-- Titulo da pagina -->
+	<title>BDPA - Bases de Dados da Pesquisa Agropecuária</title>
+ 	<!-- Links para os recursos utilizados pela pagina -->
+     <link href="style.css" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/web/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="fundoBranco">	
+	
+	<!-- HEADER -->
+	<header >
+        <p class="logotipo"><a href="/?initQuery=t"></a></p>
+		<h1>Biblioteca Rui Tendinha</h1>
+		<ul class="menulanguage">
+			<li><a title="Português" href="/?locale=pt_B&amp;initQuery=t">Português</li>
+			
+			<li><a title="Español" style="padding-left:3px" href="/?locale=es&amp;initQuery=t">Espanhol</li>
+	
+		</ul>
+    </header>
+    
+	<!-- MENU SUPERIOR -->
+	<input type="checkbox" id="btmenu"><label for="btmenu" class="btmenu">Menu</label>
+    <nav class="menu">
+		<ul >
+		<li>
+			<a href="/ajuda">Principal</a> </li>
+		<li>
+			<a href="/bibliotecas" title="">Bibliotecas</a> </li>
+		<li>
+			<a href="/creditos" title="">Créditos</a></li>
+		<li>
+			<a href="/ajuda">Itens Selecionados</a> </li>
+
+		<li>
+				<a href="/ajuda">Ajuda</a> </li>
+		</ul>
+					
+				
+
+	</nav>
+<div class="container">
+	
+
+
+	<!-- CONTEUDO -->
+	<div class="conteudo" >
+        	    <!-- TITULO -->
+		
+             <div class= "texto">
+             <p class="titulotexto">Ajuda</p>
+             <div class="color-secondary-background-color  separator text-center"></div>
+            </div>
+		
+				<p>O mecanismo de buscas proporcionado pelo software livre Apache SolR, conforme mencionado na apresentação da BDPA, oferece múltiplos e requintados recursos 
+				para recuperação de informações nas três bases de dados. As características principais do sistema de buscas são destacadas nos itens seguintes:</p>
+				<ul>
+					<li>busca simultânea nas três bases de dados (Acervo documental, Produção científica e Coleção de periódicos): é preciso inserir apenas uma vez o termo ou expressão de busca 
+						para que a consulta seja executada ao mesmo tempo nas três bases;</li>
+					<li style="padding-top:5px">navegação nos resultados: depois que a busca é executada é possível percorrer os resultados nas três bases, clicando-se na respectiva guia. Por padrão, a guia 
+					Acervo documental é a que se apresenta depois da execução de uma busca inicial. No entanto, se uma busca foi efetuada e o usuário acessou a guia Produção científica e, em seguida, 
+					fez nova busca, a guia apresentada será a da Produção científica. Este comportamento se repete sempre considerando-se a aba em que encontra o usuário ao fazer nova busca;</li>
+					<li style="padding-top:5px">possibilidade de escolher a consulta em todas as coleções da Embrapa ou especificar uma Biblioteca na interface de busca inicial;</li>
+					<li style="padding-top:5px">na busca avançada, possibilidade de escolher a busca em todas as coleções ou especificar uma ou várias coleções/bibliotecas;</li>
+					<li style="padding-top:5px">o sistema considera indiferentemente palavras acentuadas ou com o ç: assim, digitando produção ou producao os resultados serão os mesmos;</li>
+					<li style="padding-top:5px">uso de operadores booleanos:
+						<p><b>AND</b>: recupera registros que contenham todos os termos ou frases pesquisados numa mesma consulta. Exemplo: <b>produção AND alho</b> trará como resultado apenas registros que 
+						contenham ambos os termos. O operador AND também pode ser representado pelos sinais &amp; ou + ;</p>
+						<p><b>OR</b>: recupera registros que contenham pelo menos um de dois ou mais termos ou frases pesquisados. Exemplo: <b>trigo OR "triticum durum"</b> - exibirá registros que contenham um 
+						ou outro.</p>
+						<p><b>NOT</b>: este operador é usado para excluir registros que tenham o termo ou frase inserido na busca. Exemplo: <b>caju NOT cajueiro-anão</b> 
+						trará publicações que tenham caju, mas não aquelas que possuam cajueiro-anão. O operador NOT pode ser substituído pelo sinal <b>-</b> .</p>
+					</li>
+					<li style="padding-top:5px"><b>Atenção</b>: 
+						Nas buscas criadas por usuários, quando nenhum operador booleano é digitado o sistema usa como padrão o operador AND;<br>
+						Os operadores booleanos devem sempre ser digitados em maiúsculas: AND, OR, e NOT.
+					</li>
+					<li style="padding-top:5px">Uso de frases ou sequência de termos: é possível pesquisar uma sequência exata de termos encerrando-os entre aspas duplas. Exemplo: <b>"cultivo do arroz de sequeiro"</b>. 
+					A consulta com aspas duplas considera inclusive os espaços em branco entre os termos.</li>
+					<li style="padding-top:5px">Busca por proximidade – possibilita recuperar termos próximos em um campo. A expressão de busca deve conter os termos entre aspas duplas seguidas do sinal ~ e de 
+					um número indicando quantas palavras no máximo devem estar entre os dois termos (as palavras de ligação não são consideradas nesta contagem, tais como a, o, da, de, um, uma, etc.). 
+					Exemplo: <b>"doença melão"~5</b> trará registros nos quais as palavras <b>doença</b> e <b>melão</b> estarão no máximo a 5 palavras distantes uma da outra em algum dos campos indexados.</li>
+					<li style="padding-top:5px">Uso de parênteses: os parênteses agrupam dois ou mais termos ou expressões para serem combinados com outro(s) termos e expressões;
+						<p><b>Uso de caracteres-curinga:</b></p>
+						<p>* - o asterisco é usado para truncar um termo à direita (com mais frequência) ou à esquerda (menos frequente). Exemplo de termo truncado à direita: toxic* vai recuperar toxic, tóxico, 
+						tóxicos, toxicidade, toxicology, toxicity. Exemplo de truncamento à esquerda: *tabilidade resultará em registros com estabilidade, adaptabilidade, confiabilidade, etc.</p>
+						<p>*:* - esta expressão recupera e apresenta todos os registros de toda a BDPA ou todo o conjunto de registros de uma base selecionada. Se usada na busca 
+						avançada, recuperará todos os registros a partir dos filtros avançados assinalados pelo usuário. Por exemplo, se forem marcados os itens Folhetos e Livros no filtro Tipo de material e Português no
+						filtro Idioma serão apresentados todos os registros pertinentes a estas especificações.</P>
+						<p>? - o sinal de interrogação quando utilizado na posição de determinado caracter em um termo de busca, permite que qualquer outro caracter seja recuperado em seu lugar, podendo ampliar 
+						o resultado da consulta. Exemplos: ?enótipo (genótipo e fenótipo serão recuperados); Bra?il (Basil ou Brazil)</p>
+					</li>
+				</ul>
+			
+
+	
+	
+	
+	<!-- CONTEUDO -->
+	
+	
+                            <!-- SUB-TITULO -->
+                <div class="subTitulo">
+                    <h2>1 - Buscas simples:</h2>
+                </div>
+
+				<p>A página inicial da BDPA apresenta uma interface simples de busca e uma caixa de pesquisa onde quaisquer termos e combinações podem ser digitados. 
+				Além deste artifício, existem opções para o usuário escolher a busca em todas as bibliotecas ou especificar uma.</p>
+				<p align="center"><img src="web/img/ajuda/selecao-015.png" alt="" title="" width="100%"/></p>
+				<p>Uma vez inserido(s) o(s) termo(s), deve-se pressionar o botão pesquisar ou a tecla Enter.</p>
+				<p>A seguir, são dados alguns exemplos de buscas simples com um único termo:</p>
+				<ul>
+					<li>agroecologia</li>
+					<li>milho</li>
+					<li>arroz</li>
+					<li>biodiversidade</li>
+					<li>transgenia</li>
+					<li>1998</li>
+					<li>H2O</li>
+					<li>Rodrigues</li>
+					<li>wheat</li>
+					<li>agrotóxico</li>
+					<li>geoprocessamento</li>
+					<li>fungicida</li>
+					<li>psilídeo-de-concha</li>
+					<li>bovinocultura</li>
+					<li>coqueiro</li>
+				</ul>
+				<p>Exemplos de buscas simples com mais de um termo (atenção, o sistema considera o operador AND como padrão entre dois ou mais termos, caso não haja especificação de um operador):</p>
+				<ul>
+					<li>soja 2011 (recupera apenas registros que tenham a palavra soja e o ano 2011)</li>
+					<li>biocombustível Collares (recupera apenas registros que tenham o tema biocombustível e o sobrenome Collares)</li>
+					<li>extrativismo açaí Homma (traz apenas registros que tenham as palavras açaí, extrativismo e o sobrenome Homma)</li>
+					<li>teses mangaba (recupera teses sobre a mangaba)</li>
+					<li>adubação orgânica de alface (só traz publicações que contenham os 3 termos)</li>
+					<li>produção de frango de corte (apresenta registros que tragam as palavras produção, frango e corte – a preposição “de” não é procurada já que se trata de uma stopword, palavra ignorada 
+					pelo sistema)</li>
+				</ul>
+		
+
+	<!-- CONTEUDO -->
+
+
+        	<!-- SUB-TITULO -->
+	<div class="subTitulo"><h2>2 - Buscas avançadas:</h2></div>
+	<!-- SUB-TITULO -->
+	
+				<h3>2.1 - Uso da interface “Busca avançada” da BDPA:</h3>
+	
+				<p>Além da interface simples de busca, a BDPA conta com opções de consultas mais elaboradas em Busca avançada. Na página inicial há o botão para acesso à busca avançada, assim como após efetuar 
+				uma busca simples.</p>
+				
+				<p align="center"><img src="web/img/ajuda/selecao-058.png" alt="" title="" width="100%"/></p>
+				<p align="center"><img src="web/img/ajuda/selecao-059.png" alt="" title="" width="100%"/></p>
+				
+				<p></p>
+				<p><b>As opções incluem:<b></p>
+								
+				<ul>
+					<li>3 caixas para buscas, com escolha de busca geral ou por campos (assunto, autoria, conteúdo, fonte/imprenta, notas, série, título) e a possibilidade de combinações boolenas (AND, OR, ou NOT)</li>
+					<li>Alternativas de ordenação dos resultados por relevância, ou ano,ou autor, ou título;</li>
+					<li>Escolha entre a exibição de 20 a 100 registros por página</li>
+					<li>Filtros avançados:
+						<p>Ano de publicação</p>
+						<p>Ano da produção científica: para aqueles que queiram delimitar o período de produção técnico-científica da Embrapa</p>
+						<p>Tipo do material: suporte da publicação (livro impresso, documentos eletrônicos, obras de referência, etc.)</p>
+						<p>Tipo da produção científica: em se tratando de produção técnico-científica da Embrapa, qual o tipo de indicador (artigo em periódico indexado, artigo em anais, resumo em anais, 
+						capítulo em livro técnico-científico, série documentos, comunicado técnico, etc.)</p>
+						<p>Idioma</p>
+						<p>Biblioteca: em qual biblioteca ou coleção se deseja fazer a busca</p>
+					</li>
+				</ul>
+				
+				<p><b>Exemplos de buscas avançadas usando a interface da BDPA:</b></p>
+				<ul>
+					<li>Para se procurar em todos os campos registros com o tema doença em eucalipto mas que não contenham o termo ferrugem, observar o preenchimento dos critérios:
+					</li>
+				</ul>
+				<p align="center"><img src="/web/img/ajuda/selecao-027.png" alt="" title=""/></p>
+				<p>A busca foi feita usando-se as três caixas de consulta, com indicação de procura em todos os campos.  Na primeira caixa digitou-se “doença”
+					e na segunda “eucalipto”. Entre os dois termos foi inserido o operador AND. Na terceira caixa digitou-se “ferrugem”, mas com o
+					operador NÃO (NOT).</p>
+				<p>Com esta construção de busca, pretende-se localizar registros com doenças em eucalipto, entre as quais não esteja a ferrugem.</p>
+				<p>Exemplos de buscas com uso dos filtros avançados</p>
+				<ul>
+					<li><p>Como encontrar livros publicados em português, entre 2003 e 2012, sobre meio ambiente no Pantanal no acervo da Biblioteca da Embrapa Pantanal?</p>
+					</li>
+				</ul>
+				<p>Observar que no segundo campo de busca, como o termo “meio ambiente” foi	inserido entre aspas duplas, o sistema só vai encontrar os registros
+					com os termos Pantanal e “meio ambiente” se esta última	expressão se encontrar digitada nesta sequência (letra a letra,
+					incluindo o espaço em branco).</p>
+				<p align="center"><img src="web/img/ajuda/selecao-060.png" alt="" title=""/></p>
+				<ul>
+					<li><p>Num outro exemplo para uso dos recursos de busca avançada, pode-se verificar qual a produção técnico-científica da Embrapa Caprinos e Ovinos, sobre queijo de cabra publicada em artigos em anais de congresso e capítulos de livros, entre os anos de 1994 a 2012:</p>
+					</li>
+				</ul>
+				<p align="center"><img src="web/img/ajuda/selecao-063.png" alt="" title=""/></p>
+		
+	
+	<!-- SUB-TITULO -->
+	<h3>2.2 - Buscas avançadas construídas pelo usuário:</h3>
+			
+	
+	<!-- CONTEUDO -->
+	
+		
+			<p>Além das opções de busca avançada oferecidas pela interface da BDPA, é possível o usuário construir suas próprias buscas usando os
+				recursos descritos em “Orientações para buscas na BDPA”, que permitem ampliar tipos de consultas de acordo com suas necessidades
+				específicas.</p>
+				<p>	Neste sentido, alguns exemplos são apresentados a seguir:</p>
+				<ul>
+					<li><b>fertili* solo* sistema* organico* </b></li>
+				</ul>
+				
+				<p>Esta busca feita com o caractere curinga * apresenta mais resultados que se feita sem este
+				artifício, pois vai trazer registros que contenham tanto fertilidade como fertilização, e tanto os termos solo, sistema e orgânico no
+				singular como no plural.</p>
+				
+				<p>A busca anterior pode ser feita determinando-se o campo a ser procurado:</p>
+				
+				<ul>
+					<li><b>assunto:(fertili*solo* sistema* organico*)</b></li>
+					<li><b>conteudo:(fertili*solo* sistema* organico*)</b></li>
+				</ul>
+				
+				<p>Para se determinar o campo em que será feita a busca é preciso escrever o nome (rótulo) do campo seguido por : (dois pontos) e o(s) termo(s)
+				a ser(em) pesquisado(s). Se for preciso indicar mais de um termo para busca num mesmo campo, eles devem ser encerrados entre parênteses.</p>
+				<p>Os rótulos dos campos pesquisáveis são:</p>
+					<ul>
+						<li>Assunto</li>
+						<li>Autoria</li>
+						<li>Conteudo</li>
+						<li>Notas</li>
+						<li>Serie</li>
+						<li>Titulo</li>
+					</ul>
+						
+					<p>Busca com o caractere ?</p>
+						<ul>
+							<li><b>agroecolog* titulo:Bra?il</b></li>
+						</ul>
+				<p>Os resultados desta busca trarão  registros que contenham agroecologia ou agrecology e Brasil ou Brazil (o caractere ? Faz o papel do s ou do z). </p>
+				<p>Exemplos de busca com frases ou sequências:</p>
+					<ul>
+						<li><b>milho doce” cult*</b></li>
+					</ul>
+				<p>Neste caso, usou-se a função de aspas duplas para pesquisar exatamente a sequência “milho doce” e combinou-se esta expressão com o termo
+				cult* (truncado à direita com o asterisco) de forma que tanto registros com cultivo, como com cultura possam ser recuperados. Esta
+				busca também pode ser feita indicando-se um determinado campo:</p>
+					<ul>
+						<li><b>assunto:“milho doce” cult*</b></li>
+						<li><b>conteudo:“milho doce” cult*</b></li>
+					</ul>
+								
+				<p>Exemplos de uso de parênteses para combinar mais de um bloco de termos/expressões:</p>
+					<ul>
+						<li><b>(assunto:(&quot;controle biológico&quot; OR &quot;controle químico&quot;)) AND (titulo:(podrid* OR queima))</b></li>
+						<li><b>(assunto:(&quot;controle biológico&quot; OR &quot;controle químico&quot;)) AND (titulo:(podrid* OR queima)) NOT bacteria</b></li>
+					</ul>
+				
+				<p>A estratégia para o primeiro exemplo acima fará o sistema procurar apenas os registros que possuam os termos “controle biológico”
+				ou “controle químico” no campo assunto e o radical podrid* (podridão, podridões) ou o termo queima no campo título. Já para
+				o segundo exemplo, serão recuperados os mesmos registros menos aqueles que contenham a palavra bactéria.</p>
+						
+				<p>Busca por proximidade:</p>				
+					<ul>
+						<li><b>pêssego produção”~3 </b></li>
+					</ul>
+					
+				<p>Recuperará registros que tenham os dois termos separados no máximo por 3 palavras entre eles (a contagem de proximidade sempre é feita dentro
+				de cada campo indexado, ou seja, ele não ocorre entre dois campos):</p>
+					<ul>
+						<li><b>&quot;conservação germoplasma*&quot;~2 </b></li>
+					</ul>
+				<p>Recuperará registros que tenham os dois termos separados no máximo por 3 palavras entre eles. É possível também nas buscas por proximidade
+				indicar um determinado campo:</p>
+					<ul>
+						<li><b>titulo:&quot;conservação germoplasma*&quot;~2</b></li>
+					</ul>
+	
+            
+	
+	<!-- SUB-TITULO -->
+	<h3>2.3 - Buscas por sinônimos:</h3>
+		
+				<p>	Como recurso importante na potencialização dos resultados de busca, a BDPA dispõe da consulta por sinônimos, considerando como parâmetro
+				os termos estabelecidos pelo Thesagro, instrumento construído e mantido pela Binagri – Biblioteca do ministério da Agricultura, Pecuária a Abastecimento.</p>
+				<p>Na versão atual, as buscas que envolvam sinônimos de termos simples registrados no Thesagro (p. ex. Feijão, feijoeiro – caju-cajueiro
+				– mandioca, aipim, macaxeira) resultarão automaticamente em registros que contenham quaisquer termos na relação de sinônimos.</p>
+				<p>Tomando como exemplo os sinônimos para mandioca (aipim, macaxeira), caso a busca seja feita por mandioca, serão recuperados todos os registros
+				que contenham mandioca, ou aipim ou macaxeira, ampliando o total de resultados à disposição do usuário.</p>
+	
+	<!-- SUB-TITULO -->
+	<div class="subTitulo"><h2>3 - Resultados de buscas:</h2></div>
+
+	<!-- CONTEUDO -->
+
+				<p>A partir de uma busca simples ou avançada, os resultados são apresentados para as três bases de dados (Acervo documental,
+				Produção científica e Coleção de periódicos), podendo-se navegar entre elas, clicando-se na respectiva guia:</p>
+				
+				<p align="center"><img src="web/img/ajuda/selecao-031.png" alt="" title="" width="100%"/></p>				
+				
+				<p>Na página de resultados é possível:</p>
+				
+				<ul>
+					<li><p>verificar o número de registros recuperados</p>
+					<li><p>verificar e alterar a ordem de apresentação dos registros</p>
+					<li><p>navegar entre as páginas de resultados, caso haja mais de uma</p>
+				</ul>				
+				<p align="center"><img src="web/img/ajuda/selecao-032.png" alt="" title="" width="100%"/></p>				
+		
+
+	
+	<!-- SUB-TITULO -->
+	<h3>3.1 - Visualização dos registros - registro resumido e registro completo:</h3>
+	
+	<!-- CONTEUDO -->
+
+				<p>Na apresentação dos resultados os registros aparecem em formato resumido, mas podem ser vistos no modo completo clicando-se no título
+				(grafado com azul) ou no ícone da lupa.</p>
+				<p align="center"><img src="web/img/ajuda/selecao-039.png" alt="" title=""/></p>				
+				
+				<p>Registro completo: nesta modalidade são vistos campos adicionais de informação quando preenchidos, além de informações sobre cada
+				exemplar - em que biblioteca se localiza, classificação, tipo de material e se o item está disponível ou não na biblioteca (a sinalização de disponibilidade é dada pelo círculo verde e de
+				indisponibilidade pelo vermelho) -, e a opção dos dados no formato Marc 21 para importação de registro.</p>
+				<p align="center"><img src="web/img/ajuda/selecao-056.png" alt="" title=""/></p>				
+	
+
+	<!-- SUB-TITULO -->
+	<h3>3.2 - Acesso ao texto integral:</h3>
+	
+
+	<!-- CONTEUDO -->
+
+				<p>Entre os registros das publicações que compõem a BDPA, alguns apresentam o texto completo, em sua grande maioria no formato de arquivo PDF
+				para download. Nos registros resumidos estes registros são identificados pelo símbolo de arquivo pdf:</p>
+				
+				<p align="center"><img src="web/img/ajuda/selecao-040.png" alt="" title="" width="100%"/></p>
+				<p>No formato de registro completo, o acesso ao texto integral se dá por meio do clique na URL apresentada:</p>
+				<p align="center"><img src="web/img/ajuda/selecao-041.png" alt="" title="" width="100%"/></p>				
+		
+	
+	<!-- SUB-TITULO -->
+	<h3>3.3 - Organização dos resultados por facets (facetas) e seu uso:</h3>
+
+	<!-- CONTEUDO -->
+
+				<p>Entre os mecanismos de apresentação de resultados empregados pela BDPA está o recurso de exibição ou agrupamento por facetas (facets),
+				que além de sistematizarem e categorizarem as informações após a execução de buscas, permitem uma filtragem ou especificação maior
+				dos itens encontrados. Os dois procedimentos são orientados nas duas telas abaixo.</p>
+				
+				<p align="center"><img src="web/img/ajuda/selecao-043.png" alt="" title="" width="90%"/></p>
+				<br>
+				<p align="center"><img src="web/img/ajuda/selecao-044.png" alt="" title="" width="90%"/></p>
+
+				<p>Cada uma das três bases tem suas facetas próprias, a saber:</p>
+				
+				<ul>
+					<li><p>Acervo documental: Biblioteca, autor, assunto, tipo do material, ano de publicação e tipo do arquivo. Esta última faceta só é exibida
+					caso haja documentos em texto integral (PDF ou Doc) ou com outro tipo de arquivo.</p>
+					<li><p>Produção científica:  Biblioteca, autor, assunto, tipo (da produção científica, que inclui se o item é artigo em periódico, livro,
+					capítulo de livro, resumo em anais, etc.), circulação e nível (informação exclusiva para artigos em periódicos presentes na Lista Qualis-Capes), ano (da produção científica) e tipo de
+					arquivo.</p>
+					<li><p>Coleção de periódicos; esta base possui apenas o filtro Biblioteca.</p>
+				</ul>
+			
+	
+	<!-- SUB-TITULO -->
+	<h3>3.4 - Selecionando, salvando e imprimindo resultados de buscas:
+    </h3>
+
+	<!-- CONTEUDO -->
+
+				<p>Depois que uma busca é executada, os resultados são apresentados enumerados em ordem crescente. Sobre os resultados a BDPA oferece a
+				opção de selecionar os registros desejados e em seguida salvá-los em um arquivo RTF.</p>
+				<p align="center"><img src="web/img/ajuda/selecao-053.png" alt="" title="" width="100%"/></p>
+				<p>Quando houver mais de uma página de resultados, é possível percorrê-las e continuar a seleção de registros. Também é possível selecionar
+				registros nas três bases, pois todos os registros marcados farão parte da seleção e poderão ser salvos separadamente. A listagem é formada por registros no formato resumido.</p>
+				
+				<p>Depois de selecionar e clicar em Itens selecionados, a seguinte página é apresentada, bastando então escolher a base desejada (Acervo,
+				produção científica, ou Coleção de periódicos) e clicar no ícone da impressora para gerar o arquivo.</p>
+				
+				<p align="center"><img src="web/img/ajuda/selecao-047.png" alt="" title="" width="100%"/></p>
+				
+				<p>Uma outra opção é gerar o arquivo individual por registro, situação na qual ele é apresentado no formato completo. Para gerar o arquivo,
+				basta clicar no ícone da impressora que aparece à frente dele.</p>
+
+				<p align="center"><img src="web/img/ajuda/selecao-048.png" alt="" title=""/></p>				
+				
+				<p>O registro será salvo no formato a seguir.</p>
+				<p align="center"><img src="web/img/ajuda/selecao-049.png" alt="" title=""  width="100%"/></p>
+			
+	
+<!-- FIM DA ÁREA BRANCA -->	
+</div>
+</div>
+
+<!-- RODAPÉ VERDE -->
+<div class="rodape">
+
+    <div class="txtrodape">
+            Embrapa<br>
+            Todos os direitos reservados, conforme Lei n° 9.610<br>
+            Política de Privacidade<br>
+
+    </div>
+
+    <div class="txtrodape">
+        Incaper<br>
+        Biblioteca Rui Tendinha<br>
+        Rua Afonso Sarlo, 160 - Bento Ferreira<br>
+        CEP: 29052-010 - Vitória / ES <br>
+        Tel.: (27) 3636-9800 / (27) 3636-9846 <br>
+        E-mail: biblioteca@incaper.es.gov.br<br>
+
+</div>
+    
+
+</div>
+
+</body>
+</html>

@@ -62,29 +62,35 @@
 	<div class="container">
 	
 		<!-- inicio busca -->
-		<div class="busca">
-			<div class="formulario" summary="Tabela do Formulario" >
-				<form id="frmBusca" name="frmBusca" method="post" action="busca" onSubmit="return submitBusca(this);">
-					<input type="hidden" name="b" value="ad">
-					<input type="hidden" name="clickBuscaSimples" value="t">
-					<input type="hidden" name="clickBuscaAvancada" value="f">
-					<select name="biblioteca" class="bibliotecaItem">
-						<option class="optionBibliotecaItem" value="vazio">Todas as Bibliotecas</option>
-						
-										<option class="optionBibliotecaItem" value=BRT>Biblioteca Rui Tendinha</option>
-						
-										<option class="optionBibliotecaItem" value=BSOO>ELDR Sooretama</option>
-						
-										<option class="optionBibliotecaItem" value=BESP>Programa A Voz do Campo</option>
-						
-					</select>
-					<input class="textBuscar2" type="text" name="busca" value="kiwi">
-					<input style="padding-left:10px" class="botaobusca2" type="submit" value="Buscar">					
-					<input style="padding-left:10px" class="botaobusca2" type="button" value="Busca avançada" onclick="irBuscaAvancada();">						
-				</form>
+		
+			<form id="frmBusca" name="frmBusca" method="post" action="busca" onSubmit="return submitBusca(this);">
+				<div class="busca">
+					<div class="formulario" summary="Tabela do Formulario" >
 					
+							<input type="hidden" name="b" value="ad">
+							<input type="hidden" name="clickBuscaSimples" value="t">
+							<input type="hidden" name="clickBuscaAvancada" value="f">
+							<select name="biblioteca" class="bibliotecaItem">
+								<option class="optionBibliotecaItem" value="vazio">Todas as Bibliotecas</option>
+								
+												<option class="optionBibliotecaItem" value=BRT>Biblioteca Rui Tendinha</option>
+								
+												<option class="optionBibliotecaItem" value=BSOO>ELDR Sooretama</option>
+								
+												<option class="optionBibliotecaItem" value=BESP>Programa A Voz do Campo</option>
+								
+							</select>
+							<input class="textBuscar2" type="text" name="busca" value="kiwi">
+							<input  class="botaobusca2" type="submit" value="Pesquisar">	
+					</div>
+				<div class="buscaavancada">			
+						<input   type="button" value="Busca avançada" onclick="irBuscaAvancada();">						
+				</div>	
 			</div>
-		</div>
+			</form>
+					
+			
+		
 	<!-- fim da busca -->	
 		
 		
@@ -93,17 +99,17 @@
 		
 		
 			<!-- inicio Tabulacao -->
-							
+			<div class="abas">			
 			<ul class="nav-tabs"> 	<!-- Tabs -->
 				<li><a class="aba_tabs" onclick="abas(1);"><span>Acervo documental</span></a></li>
 				<li><a class="aba_tabs" onclick="abas(2);"><span>Produção científica</span></a></li>
 				<li><a class="aba_tabs" onclick="abas(3);"><span>Coleção de periódicos</span></a></li>
 			</ul> 	<!-- fecha Tabs -->
-			
+		</div>	
 
 			<div id="fragment-1"> <!-- Pagina 1 -->
 				
-				<div class="tabela" width="100%" cellpadding="0" cellspacing="0" border="0">
+				<div class="tabela">
 
 						<div valign="top" class="coluna1b"> <!-- Coluna 1 -->
 							<form name="frmFacetsDocumento" method="post" action="busca">
@@ -111,7 +117,7 @@
 								<input type="hidden" name="b" value="ad">
 								<input type="hidden" name="biblioteca" value="vazio">
 								
-								<div class="itema" width="100%" border="0" bgcolor="white"><!--Incia itema-->
+								<div class="itema"><!--Incia itema-->
 									<div align="center" valign="middle">
 										<input  class="buttonAtualizar" type="submit" onclick="document.frmFacetsDocumento.submit();" value="ATUALIZAR"><br><br>		
 									
@@ -175,7 +181,9 @@
 																	
 									</div>	
 								</div>	<!--Fecha itemc-->							
-							<div class="itemd"> <!--Incia itemd-->
+							
+							
+								<div class="itemd"> <!--Incia itemd-->
 								<table width="100%" border="0" bgcolor="white"> 
 											<tr>
 												<td id="menuAssuntoAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuAssuntoAD','subMenuAssuntoAD');"> 
@@ -227,11 +235,11 @@
 										<table width="100%" border="0" bgcolor="white" id="subMenuTipoMaterialAD">
 										<tr>
 										<td width="100%">
-										<table width="100%">
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets400" value="Livros">Livros <b>(3)</b></td><td width="3px"></td></tr>
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets401" value="Anais e Proceedings de eventos">Anais e Proceedings de eventos <b>(2)</b></td><td width="3px"></td></tr>
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets402" value="Folhetos">Folhetos <b>(2)</b></td><td width="3px"></td></tr>
-</table>
+																					<table width="100%">
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets400" value="Livros">Livros <b>(3)</b></td><td width="3px"></td></tr>
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets401" value="Anais e Proceedings de eventos">Anais e Proceedings de eventos <b>(2)</b></td><td width="3px"></td></tr>
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets402" value="Folhetos">Folhetos <b>(2)</b></td><td width="3px"></td></tr>
+											</table>
 
 										</td>
 										</tr>
@@ -239,7 +247,7 @@
 									</div> <!--Fecha item E-->
 
 									<div class="itemf"> <!--Inicia item F-->
-										<table width="100%" border="0" bgcolor="white"> 
+										<table width="100%" > 
 											<tr>
 												<td id="menuAnoPublicacaoAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuAnoPublicacaoAD','subMenuAnoPublicacaoAD');"> 
 													Ano de publicação
@@ -249,51 +257,59 @@
 										<table width="100%" border="0" bgcolor="white" id="subMenuAnoPublicacaoAD">
 										<tr>
 										<td width="100%">
-										<table width="100%">
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets500" value="2007">2007 <b>(1)</b></td><td width="3px"></td></tr>
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets501" value="2003">2003 <b>(1)</b></td><td width="3px"></td></tr>
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets502" value="2002">2002 <b>(1)</b></td><td width="3px"></td></tr>
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets503" value="1998">1998 <b>(2)</b></td><td width="3px"></td></tr>
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets504" value="1996">1996 <b>(2)</b></td><td width="3px"></td></tr>
-</table>
+																					<table width="100%">
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets500" value="2007">2007 <b>(1)</b></td><td width="3px"></td></tr>
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets501" value="2003">2003 <b>(1)</b></td><td width="3px"></td></tr>
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets502" value="2002">2002 <b>(1)</b></td><td width="3px"></td></tr>
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets503" value="1998">1998 <b>(2)</b></td><td width="3px"></td></tr>
+											<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets504" value="1996">1996 <b>(2)</b></td><td width="3px"></td></tr>
+											</table>
 
 										</td>
 										</tr>								
-										</table>	
+										</table>
+										
+										
 									</div>	<!--Fecha item F-->	
 									
 									<div class="itemG"><!--Inicia item G-->
 										
-										<table width="100%" border="0" bgcolor="white"> 
+											<table > 
+												<tr>
+													<td id="menuIdiomaAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuIdiomaAD','subMenuIdiomaAD');"> 
+														Idioma
+													</td>
+												</tr>
+											</table>
+											<table width="100%" id="subMenuIdiomaAD">
 											<tr>
-												<td id="menuIdiomaAD" class="menuLaranjaAberto" colspan="3" onclick="javascript:mostraEsconde('menuIdiomaAD','subMenuIdiomaAD');"> 
-													Idioma
+											<td width="100%">
+											<table width="100%">
+												<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets700" value="Português">Português <b>(7)</b></td><td width="3px"></td></tr>
+												</table>
+
+											</td>
+											</tr>
+											</table>	
+										
+									</div><!--Fecha item G-->
+									
+									<div class="itemG"><!--Inicia item H-->
+										<table width="100%" >
+											<tr>
+												<td align="center" valign="middle"> 
+													<br><input  class="buttonAtualizar" type="submit" onclick="document.frmFacetsDocumento.submit();" value="ATUALIZAR"><br><br>		
 												</td>
 											</tr>
 										</table>
-										<table width="100%" border="0" bgcolor="white" id="subMenuIdiomaAD">
-										<tr>
-										<td width="100%">
-										<table width="100%">
-<tr><td width="3px"></td><td class="menuBranco"><input type="checkbox"  name="facets700" value="Português">Português <b>(7)</b></td><td width="3px"></td></tr>
-</table>
-
-										</td>
-										</tr>
-										</table>	
-										
-									</div><!--Fecha item G-->
-									<div class="itemG"><!--Inicia item H-->
-								<table width="100%" border="0" bgcolor="white">
-									<tr>
-										<td align="center" valign="middle"> 
-											  <br><input  class="buttonAtualizar" type="submit" onclick="document.frmFacetsDocumento.submit();" value="ATUALIZAR"><br><br>		
-										</td>
-									</tr>
-								</table>
-							</div> <!--Fecha item H-->
+									</div> <!--Fecha item H-->
 							</form>
 						</div> <!-- Fim da Coluna 1 -->
+
+
+
+
+
 						<div class="coluna2b">
 						<div valign="top" class="colunaRegistro"> <!-- Coluna 2 -->
 						<ul class="listaColuna2" class="itemSort">
@@ -374,6 +390,24 @@
 	
 				
 			</div>	-->
+			<div class="rodape">
+
+				<div class="txtrodape">
+						Embrapa<br>
+						Todos os direitos reservados, conforme Lei n° 9.610<br>
+						Política de Privacidade<br>
+			
+				</div>
+			
+				<div class="txtrodape">
+					Incaper<br>
+					Biblioteca Rui Tendinha<br>
+					Rua Afonso Sarlo, 160 - Bento Ferreira<br>
+					CEP: 29052-010 - Vitória / ES <br>
+					Tel.: (27) 3636-9800 / (27) 3636-9846 <br>
+					E-mail: biblioteca@incaper.es.gov.br<br>
+			
+			</div>
 	</div>
 
 
@@ -382,24 +416,7 @@
 
  
 		
-<div class="rodape">
 
-	<div class="txtrodape">
-			Embrapa<br>
-			Todos os direitos reservados, conforme Lei n° 9.610<br>
-			Política de Privacidade<br>
-
-	</div>
-
-	<div class="txtrodape">
-		Incaper<br>
-		Biblioteca Rui Tendinha<br>
-		Rua Afonso Sarlo, 160 - Bento Ferreira<br>
-		CEP: 29052-010 - Vitória / ES <br>
-		Tel.: (27) 3636-9800 / (27) 3636-9846 <br>
-		E-mail: biblioteca@incaper.es.gov.br<br>
-
-</div>
 	
 
 </div>

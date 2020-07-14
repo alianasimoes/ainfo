@@ -131,6 +131,9 @@ label[for="btmenu"]{
 }
 .busca
 {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
 	padding: 6VW 0 0;
 	width: 100%;
 	max-width: 100%;
@@ -203,7 +206,7 @@ margin-right: 20px;
 
 	height: 40px;
 	font-size: 0.8em;
-	margin-left: 20px;
+	margin-left: 10px;
 	padding: 10px 30px!important;
     background-color: #009687!important;
     font-weight: 400!important;
@@ -215,6 +218,28 @@ margin-right: 20px;
     border: none!important;
 	margin-top: 0px;
 	text-transform: uppercase;
+}
+.buscaavancada{
+	display: block;
+	justify-content: center;
+	align-items: center;
+	margin:0 auto;
+
+}
+.buscaavancada input
+{
+	height: 30px;
+	font-size: 0.8em;
+	padding: 10px 30px!important;
+    background-color: #fff!important;
+    font-weight: 400!important;
+    color: #009687!important;
+    display: inline-block!important;
+	cursor: pointer!important;
+	border: none!important;
+	margin-top: 10px;
+	text-transform: uppercase;
+
 }
 .botaolimpar
 {
@@ -247,6 +272,7 @@ margin-right: 20px;
 	height: 47px;
 	margin: 50px 0px 50px 0px;
 	border-bottom: 1px solid #009687;
+	display: flex;
 
 }
 .nav-tabs ul{
@@ -318,6 +344,7 @@ border-top: 1px solid #009875!important;
 flex-wrap: wrap;
 justify-content: center;
 margin-top: 60px;
+z-index: 2;
 }
 
 .txtrodape{
@@ -397,14 +424,14 @@ font-family:'OpenSans-Bold',Arial,sans-serif;
 .tabela{
   display: grid;
   grid-template-columns: 250px 1fr;
-  grid-template-rows: 100px 1fr;
+  grid-template-rows: minmax(100px, auto);
   gap: 1px 1px;
 
 }
 .coluna1b{
 	display: grid;
 	grid-template-columns: 250px;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
 	gap: 1px 1px;
 
 }
@@ -1255,7 +1282,7 @@ select
 	display: block;
 	padding:0;
 	margin:0;
-	height: 100%;
+	height: auto;
 
 
 }
@@ -1263,6 +1290,9 @@ select
 	padding:5px;
 	margin:0;
 	color: #009687;
+	height: auto;
+	z-index: 1;
+	
 
 }
 #fragment-2 {	
@@ -1291,6 +1321,7 @@ select
 	vertical-align:middle;
 	width:350px;
 	padding-left:5px;
+	margin-left: 5px;
 }
 
 .textBuscarPrincipal {
@@ -1351,6 +1382,7 @@ select
 	width:250px;
 	border:1px solid #CBCACA;
 	vertical-align:middle;
+	margin-right: 5px;
 }
 
 .bibliotecaItemPrincipal {
@@ -1427,7 +1459,7 @@ div.scroll {
 }
 
 
-@media (min-width: 1024px){
+@media (max-width: 1024px){
 	.conteudo{
 	flex-direction: row;
     height: 100%;
@@ -1435,6 +1467,24 @@ div.scroll {
     margin-left: auto;
     margin-right: auto;
 	}
+
+.formulario {
+    display: flex;
+	align-items: center;
+	
+}
+.bibliotecaItem{
+		width: 200px;
+		height: 46px;
+		margin-right: 5px;
+	}
+.textBuscar2{
+	width: 250px;
+}
+.rodape{
+	flex-wrap: nowrap;
+	justify-content: left;
+}
 }
 
 @media screen and (max-width: 600px){
@@ -1625,4 +1675,76 @@ margin: 0px 40px;
 .txtrodape{
 padding: 20px 60px;
 
+}
+/*pagina resultado*/
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-top: 50px;
+	height: auto;
+
+}
+.busca{
+	display: grid;
+	grid-template-columns: 300px ;
+	grid-template-rows: 180px;
+	margin-bottom: 50px;
+	text-align: left;
+}
+.formulario{
+	display: block;
+	max-width: 300px;
+	padding: 0px;
+}
+.bibliotecaItem{
+	height: 45px;
+	width: 285px;
+}
+.textBuscar2{
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 5px;
+	max-width: 280px;
+	
+}
+.nav-tabs{
+	max-width: 300px;
+}
+.itema{
+	margin-top: 20px;
+}
+.tabela{
+	display:grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 330px;
+
+}
+.coluna1b{
+	margin: 0 auto;
+	grid-template-columns: 300px;
+	grid-auto-rows: auto;
+	
+}
+.itema{
+	display: none;
+}
+
+
+.listaColuna2{
+	display: grid;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 10px 10px;
+	font-size: 13px;
+	text-align: left;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.nav-tabs{
+	margin: 0px 0px 20px 0px;
+}
+.registrosRecuperados{
+	font-size: 10px;
 }

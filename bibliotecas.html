@@ -30,28 +30,32 @@
 		</ul>
     </header>
     
-  <!-- MENU SUPERIOR -->
-	<input type="checkbox" id="btmenu"><label for="btmenu" class="btmenu">Menu</label>
-    <nav class="menu">
-		<ul >
-		<li>
-			<a href="/ajuda">Principal</a> </li>
-		<li>
-			<a href="/bibliotecas" title="">Bibliotecas</a> </li>
-		<li>
-			<a href="/creditos" title="">Créditos</a></li>
-		<li>
-			<a href="/ajuda">Itens Selecionados</a> </li>
-
-		<li>
-				<a href="/ajuda">Ajuda</a> </li>
-		</ul>
-					
-	</nav>
+ <!-- MENU SUPERIOR -->
+ <a class="btnmenu">Menu</a>
+ <nav >
 	
+	<ul >
+	
+	<li>
+		<a href="/ajuda">Principal</a> </li>
+	<li>
+		<a href="/bibliotecas" title="">Bibliotecas</a> </li>
+	<li>
+		<a href="/creditos" title="">Créditos</a></li>
+	<li>
+		<a href="/ajuda">Itens Selecionados</a> </li>
+
+	<li>
+			<a href="/ajuda">Ajuda</a> </li>
+	</ul>
+					
+
+</nav>
 	
 		<!-- FORMULARIO CENTRAL -->
 		<div class="container">
+			<div class="conteudo">
+			
 		<div class= "texto">
             <p class="titulotexto">Bibliotecas</p>
             <div class="color-secondary-background-color  separator text-center"></div>
@@ -92,7 +96,7 @@
 								
 							
 						
-					
+	</div>			
 					
 			
 		</div>
@@ -122,19 +126,14 @@
 		
 	
 </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61260998-2"></script>
-<script>
-	  window.dataLayer = window.dataLayer || [];
-	    function gtag(){dataLayer.push(arguments);}
-	      gtag('js', new Date());
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.btnmenu').click(function(){
+			$('nav').toggleClass('active')
+		})
+	})
 
-	        gtag('config', 'UA-61260998-2');
-	</script>
-
-
-	<script language="JavaScript" type="text/JavaScript">
-		document.forms.frmBusca.busca.focus();
-	</script>
+</script>
 </body>
 </html>

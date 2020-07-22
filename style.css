@@ -52,45 +52,54 @@ header{
 .menup{
 	display: flex;
 }
-
-.menu ul{
-
-	display: flex;
+.btnmenu{
+	display: none;
 	
-
-
 }
-.menu li{
+
+nav ul{
+	display: flex;
+}
+
+
+nav li{
 	margin-left: 10px;
 	text-decoration: none;
 	list-style: none;
 	text-transform: uppercase;
 	padding: 18px;
+	display: flex;
 
 }
-.menu li a {
+nav li a{
 	display: block;
 	color: #4d4d4d;
 	font-size: 0.9em;
-	font-weight: 600;
-
-
+	font-weight: 500;
+	text-decoration: none;
 }
 	
-.menu li a:hover{
-
+nav li a:hover{
 	color:#009687;
+	font-size: 0.9em;
+	list-style: none;
+	text-decoration: none;
+}
+
+nav li a:link{
+	color: #4d4d4d;
 	font-size: 0.9em;
 	list-style: none;
 	text-decoration: none;
 
 }
-#btmenu{
+#check1{
 	display: none;
 }
-label[for="btmenu"]{
+
+/*label[for="btmenu"]{
 	display: none;
-}
+}*/
 .menulanguage{
 
 	display: flex;
@@ -510,10 +519,10 @@ form {
 	margin-bottom:0px;
 }
 
-a:link    {color:#6c6c6c; text-decoration:none}
+/*a:link    {color:#6c6c6c; text-decoration:none}
 a:active  {color:#6c6c6c; text-decoration:none}
 a:visited {color:#6c6c6c; text-decoration:none}
-a:hover   {color:#4375C4; text-decoration:underline}
+a:hover   {color:#6c6c6c; text-decoration:underline}*/
 
 a img { 
 	border:none; 
@@ -1460,7 +1469,7 @@ div.scroll {
 
 
 @media (max-width: 1024px){
-	.conteudo{
+.conteudo{
 	flex-direction: row;
     height: 100%;
     width: 945px;
@@ -1523,57 +1532,72 @@ h1{
 	grid-row: 1/1;
 
 }
-label[for="btmenu"]{
+
+.btnmenu {
 	display: block;
-	padding: 15px;
+	padding: 13px;
 	color: #009687;
 	text-align: center;
 	cursor: pointer;
+	margin-left: 2px;
 	border-radius: 4px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
-	width:100px;
-	height: 20px;
+	width:80px;
+	height: 15px;
 
 }
-nav { display: none; }
 
-#btmenu:checked ~ nav {
-	display: block;
+nav{
+	display: none;
+	position: absolute;
+	max-width: 320px;
+	left:-100%;
+	transition: 0.5s;
+
 }
 
-.conteudo{
-	flex-direction: row;
-    height: 100%;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-	}
 
-.menu ul{
+nav ul{
 
 	display: grid;
 	grid-template-rows: 0.2fr 0.2fr 0.2fr;
 	grid-template-columns: 1fr;
 	background-color: #009687;
 	margin-top: 1px;
+	color: #fff;
+	
 	
 }
-.menu li a {
-
+nav li{
+	margin-left: 10px;
+	text-decoration: none;
+	list-style: none;
+	text-transform: uppercase;
 	color: #fff;
 
 }
-.menu li a:hover {
 
+nav li a:link{
 	color: #fff;
-	text-decoration: underline;
+	font-size: 0.9em;
+	list-style: none;
+	text-decoration: none;
 
 }
-#btmenu:checked ~ .menu {
-	
-	margin-left: 0;
+.active{
+	display: block;
+	left:2px;
 }
 
+
+
+.conteudo{
+	flex-direction: row;
+    height: 100%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+	}
 
 .grid{
     display: grid;

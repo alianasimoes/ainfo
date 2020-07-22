@@ -32,9 +32,11 @@
     </header>
     
 	<!-- MENU SUPERIOR -->
-	<input type="checkbox" id="btmenu"><label for="btmenu" class="btmenu">Menu</label>
-    <nav class="menu">
+	<a class="btnmenu">Menu</a>
+	 <nav >
+		
 		<ul >
+		
 		<li>
 			<a href="/ajuda">Principal</a> </li>
 		<li>
@@ -47,15 +49,17 @@
 		<li>
 				<a href="/ajuda">Ajuda</a> </li>
 		</ul>
-					
-				
+						
 
 	</nav>
+
+	<!-- CONTEUDO -->
+
 <div class="container">
 	
 
 
-	<!-- CONTEUDO -->
+	
 	<div class="conteudo" >
         	    <!-- TITULO -->
 		
@@ -188,7 +192,7 @@
 					<li>Para se procurar em todos os campos registros com o tema doença em eucalipto mas que não contenham o termo ferrugem, observar o preenchimento dos critérios:
 					</li>
 				</ul>
-				<p align="center"><img src="/web/img/ajuda/selecao-027.png" alt="" title=""/></p>
+				<p align="center"><img src="/web/img/ajuda/selecao-027.png" alt="" title="" width="100%"/></p>
 				<p>A busca foi feita usando-se as três caixas de consulta, com indicação de procura em todos os campos.  Na primeira caixa digitou-se “doença”
 					e na segunda “eucalipto”. Entre os dois termos foi inserido o operador AND. Na terceira caixa digitou-se “ferrugem”, mas com o
 					operador NÃO (NOT).</p>
@@ -201,12 +205,12 @@
 				<p>Observar que no segundo campo de busca, como o termo “meio ambiente” foi	inserido entre aspas duplas, o sistema só vai encontrar os registros
 					com os termos Pantanal e “meio ambiente” se esta última	expressão se encontrar digitada nesta sequência (letra a letra,
 					incluindo o espaço em branco).</p>
-				<p align="center"><img src="web/img/ajuda/selecao-060.png" alt="" title=""/></p>
+				<p align="center"><img src="web/img/ajuda/selecao-060.png" alt="" title="" width="100%"/></p>
 				<ul>
 					<li><p>Num outro exemplo para uso dos recursos de busca avançada, pode-se verificar qual a produção técnico-científica da Embrapa Caprinos e Ovinos, sobre queijo de cabra publicada em artigos em anais de congresso e capítulos de livros, entre os anos de 1994 a 2012:</p>
 					</li>
 				</ul>
-				<p align="center"><img src="web/img/ajuda/selecao-063.png" alt="" title=""/></p>
+				<p align="center"><img src="web/img/ajuda/selecao-063.png" alt="" title="" width="100%"/></p>
 		
 	
 	<!-- SUB-TITULO -->
@@ -330,12 +334,12 @@
 
 				<p>Na apresentação dos resultados os registros aparecem em formato resumido, mas podem ser vistos no modo completo clicando-se no título
 				(grafado com azul) ou no ícone da lupa.</p>
-				<p align="center"><img src="web/img/ajuda/selecao-039.png" alt="" title=""/></p>				
+				<p align="center"><img src="web/img/ajuda/selecao-039.png" alt="" title="" width="100%"/></p>				
 				
 				<p>Registro completo: nesta modalidade são vistos campos adicionais de informação quando preenchidos, além de informações sobre cada
 				exemplar - em que biblioteca se localiza, classificação, tipo de material e se o item está disponível ou não na biblioteca (a sinalização de disponibilidade é dada pelo círculo verde e de
 				indisponibilidade pelo vermelho) -, e a opção dos dados no formato Marc 21 para importação de registro.</p>
-				<p align="center"><img src="web/img/ajuda/selecao-056.png" alt="" title=""/></p>				
+				<p align="center"><img src="web/img/ajuda/selecao-056.png" alt="" title="" width="100%"/></p>				
 	
 
 	<!-- SUB-TITULO -->
@@ -429,6 +433,16 @@
     
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.btnmenu').click(function(){
+			$('nav').toggleClass('active')
+		})
+	})
+
+</script>
 
 </body>
 </html>

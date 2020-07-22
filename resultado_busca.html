@@ -37,25 +37,26 @@
     </header>
 	
  <!-- MENU SUPERIOR -->
- <input type="checkbox" id="btmenu"><label for="btmenu" class="btmenu">Menu</label>
- <nav class="menu">
-     <ul >
-     <li>
-         <a href="/ajuda">Principal</a> </li>
-     <li>
-         <a href="/bibliotecas" title="">Bibliotecas</a> </li>
-     <li>
-         <a href="/creditos" title="">Créditos</a></li>
-     <li>
-         <a href="/ajuda">Itens Selecionados</a> </li>
+ <a class="btnmenu">Menu</a>
+ <nav >
+	
+	<ul >
+	
+	<li>
+		<a href="/ajuda">Principal</a> </li>
+	<li>
+		<a href="/bibliotecas" title="">Bibliotecas</a> </li>
+	<li>
+		<a href="/creditos" title="">Créditos</a></li>
+	<li>
+		<a href="/ajuda">Itens Selecionados</a> </li>
 
-     <li>
-             <a href="/ajuda">Ajuda</a> </li>
-     </ul>
-                 
-             
+	<li>
+			<a href="/ajuda">Ajuda</a> </li>
+	</ul>
+					
 
- </nav>
+</nav>
 
 <!-- conteúdo -->
 
@@ -470,6 +471,15 @@ function irBuscaAvancada() {
 		location.href='buscaavancada?b=ad';
 	}
 }
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.btnmenu').click(function(){
+			$('nav').toggleClass('active')
+		})
+	})
+
+</script>
 </script>
 </body>
 </html>

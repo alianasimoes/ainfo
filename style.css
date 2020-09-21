@@ -1627,7 +1627,9 @@ nav li a:link{
 	margin-left: 0px;
 	margin-bottom: 20px;
 }
-
+.textoajuda{
+	width: 80%;
+}
 .ajuda{
 	display: block;
 	justify-content: space-around;

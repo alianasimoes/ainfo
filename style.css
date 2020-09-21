@@ -158,7 +158,8 @@ flex-wrap: wrap;
 padding: 5px 30px;
 }
 .textoajuda{
-	width: 80%;
+	width: 70%;
+	margin:0 auto;
 }
 
 .ajuda{

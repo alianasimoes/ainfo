@@ -2,7 +2,7 @@
 html 
 {
 	font-size:100.01%;
-	font-family:'OpenSans-Regular',Arial,sans-serif;
+	font-family:'OpenSans-Bold',Arial,sans-serif;
 }
 h1{
 	color: #ffffff;
@@ -25,7 +25,7 @@ Esse estilo fica */
 body, ul, li, p
 {
 
-	font-family:'OpenSans-Regular',Arial,sans-serif;
+	font-family:'OpenSans-Bold',Arial,sans-serif;
 	font-weight: normal;
 	margin:0px; 
 	padding:0px;
@@ -429,14 +429,6 @@ font-size: 1em;
 font-family:'OpenSans-Bold',Arial,sans-serif;
 
 }
-.gridtitulom{
-	grid-column-start: 1;
-	grid-column-end:3;
-	color: #009687;
-	font-size: 1em;
-	font-family:'OpenSans-Bold',Arial,sans-serif;
-	
-	}
 /* CSS Tabela da pagina Resultado */
 .tabela{
   display: grid;
@@ -969,7 +961,7 @@ select
 	color:#4d4d4d;		
 	padding-bottom:5px;
 	font-size:0.8em;
-	margin-top: 27px;
+	margin-top: 10px;
 
 }
 
@@ -1347,18 +1339,6 @@ select
 	vertical-align:middle;
 	width:317px;
 	border:1px solid #CBCACA;
-	
-
-	
-}
-.textBuscarAvancada {
-	height:40px;
-	color:black;
-	vertical-align:middle;
-	width:317px;
-	border:1px solid #CBCACA;
-	margin-bottom: 9px;
-	margin-top: 10px;
 
 	
 }
@@ -1647,9 +1627,7 @@ nav li a:link{
 	margin-left: 0px;
 	margin-bottom: 20px;
 }
-.textoajuda{
-	width: 80%;
-}
+
 .ajuda{
 	display: block;
 	justify-content: space-around;
@@ -1690,11 +1668,7 @@ nav li a:link{
 
 }
 .campo2, .campo3{
-	margin: 0 40px 15px 40px;
-}
-.campo2{
-	grid-row-gap:25px;
-
+	margin: 0 40px 10px 40px;
 }
 .coluna1, .coluna2, .coluna3{
 margin: 0px 40px;
